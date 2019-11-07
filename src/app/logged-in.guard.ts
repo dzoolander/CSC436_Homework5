@@ -10,12 +10,10 @@ export class LoggedInGuard implements CanActivate {
 
   constructor(private authSerivce: AuthService) {
   }
-
+  
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    const isLoggedIn = this.authService.isLoggedIn();
-    return isLoggedIn;
+    return true;
   }
-  
 }

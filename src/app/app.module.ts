@@ -29,7 +29,7 @@ import { environment } from '../environments/environment';
 const routes: Routes = [
   { path: '', redirectTo: 'login' , pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
-  { path: 'chat', component: ChatPageComponent, canActivate [LoggedInGuard] }//need to configure auth guard later
+  { path: 'chat', component: ChatPageComponent }//need to configure auth guard later
 ];
 
 @NgModule({
