@@ -19,6 +19,11 @@ import { LoginComponent } from './login/login.component';
 
 import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  { path: '', redirectTo: 'login' , pathMatch: 'full'},
+  { path: 'login', component: LoginComponent},
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +40,7 @@ import { RouterModule, Routes } from '@angular/router';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule.forRoot(routes)
   ],
   providers: [
     MessagesService, ThreadsService, UsersService
